@@ -45,7 +45,7 @@ class Team extends Component {
 
   render() {
     return (
-      <div>
+      <div style={{'marginBottom': '10px'}}>
         <Player onStatChange={(stat) => this.onPlayerStatChange('player1', stat)} stats={this.state.player1}/>
         <Player onStatChange={(stat) => this.onPlayerStatChange('player2', stat)} stats={this.state.player2}/>
         <Player onStatChange={(stat) => this.onPlayerStatChange('player3', stat)} stats={this.state.player3}/>

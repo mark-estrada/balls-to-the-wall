@@ -19,14 +19,28 @@ class Game extends Component {
 
   render() {
     return (
-      <div>
-        <div>
-          <div>{this.state.score1}</div>
-          <Team onScoreChange={(score) => this.setScore('score1', score)} />
-        </div>
-        <div>
-          <div>{this.state.score2}</div>
-          <Team onScoreChange={(score) => this.setScore('score2', score)} />
+      <div className="container-fluid">
+        <div className="row">
+          <div className="col-sm">
+            <div className="container-fluid">
+              <div className="row">
+                <h3 className="col text-center">{this.state.score1}</h3>
+                <div className="col-3 text-center align-self-center">Pts</div>
+                <div className="col-3 text-center align-self-center">Reb</div>
+              </div>
+              <Team onScoreChange={(score) => this.setScore('score1', score)} />
+            </div>
+          </div>
+          <div className="col-sm">
+            <div className="container-fluid">
+              <div className="row">
+                <h3 className="col text-center">{this.state.score2}</h3>
+                <div className="col-3 text-center align-self-center">Pts</div>
+                <div className="col-3 text-center align-self-center">Reb</div>
+              </div>
+              <Team onScoreChange={(score) => this.setScore('score2', score)} />
+            </div>
+          </div>
         </div>
       </div>
     );
